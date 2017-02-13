@@ -1,0 +1,117 @@
+%YAML 1.2
+---
+
+
+Contact:
+  Name: Anna E Lavender
+  Email: anna.e.lavender@gmail.com
+
+
+Summary: >
+  Software architect. Pythonista with 10 years of experience. Crafting systems
+  to power the next generation of web services.  Guiding your teams to perform
+  at their peak.  Harnessing data to change the way your organisation works,
+  thinks, and grows.
+
+
+Expertise:
+
+  - Python for Big Data and Machine Learning (Numpy, Pandas, Scikit-Learn) and
+    enterprise web development (Django)
+
+  - Scalable, fault-tolerant architecture for distributed systems (Amazon Web
+    Services)
+
+  - Distributed SQL and NoSQL databases for global low-latency data retrieval
+
+  - Modern JavaScript (ECMAScript6/7, React, D3)
+
+  - Functional programming paradigms
+
+  - Git and Github; continuous integration
+
+  - Technical leadership on cross-functional teams
+
+
+Experience:
+
+  - Organisation:  Monetate, Inc
+    Location:  Conshohocken, PA
+    Date:  2015-Present
+    Title:  Software Architect
+    Department:  Product Engineering
+
+    Accomplishments:
+      - Led a team of developers, designers, and product managers
+      - Developed web APIs capable of serving thousands of requests
+        per second to handle rapid data ingestion, instantaneous retrieval,
+        real-time analytics, and third-party integrations
+      - Initiated a department-wide effort to refactor core infrastructure
+        from a closed, monolithic, single-purpose system to an open,
+        microservice-oriented, RESTful, extensible platform
+      - Designed a flexible, loosely-schematised, distributed data
+        architecture, replacing our previous rigidly-defined relational
+        data structure, allowing for rapid evolution
+      - Raised standards of code quality and readiness for release by
+        instilling a culture that prioritised review, testing, and
+        documentation, and made time for the cleanup of technical debt
+      - 'Contributed across the full stack: client-side JS, web servers,
+        algorithms, data management, deployment and monitoring.'
+      - Mentored junior developers and facilitated knowledge transfer to
+        both technical and non-technical colleagues
+
+  - Organisation:  Susquehanna International Group
+    Location:  Bala Cynwyd, PA
+    Date:  2007-2015
+    Title:  Lead Data Analyst
+    Department:  Statistical Options Group
+
+    Accomplishments:
+      - Created data-driven models to rapidly predict the value and optimal
+        execution strategy for a million options contracts per day from
+        leading retail brokerage firms such as E-Trade and Fidelity
+      - Drove profit increases of 50% to 100% year-over-year for five years
+        running, while more than tripling market share
+      - Developed a pipeline for cleaning and matching gigabytes of data per
+        day from disparate sources.  This system now underpins much of the
+        quantitative analysis in options trading at SIG.
+      - Spearheaded research into new order routing algorithms and directly
+        advised software developers throughout their implementation, testing,
+        release, and evaluation
+      - Improved real-time awareness of both business and technical risks
+        with new metrics and monitors
+      - 'Addressed the needs of disparate groups: traders, quants, developers,
+        sales managers, and risk and compliance managers'
+
+  - Organisation:  Cornell University
+    Location:  Ithaca, NY
+    Accomplishments:
+    - Teaching Assistant, Physics, 2006
+    - Research Assistant, Theoretical & Applied Mechanics, 2005
+
+
+Education:
+  - Organisation:  Cornell University
+    Location:  Ithaca, NY
+    Degrees:
+      - Degree:  Master of Engineering
+        Date:  2006
+        Department:  Theoretical & Applied Mechanics
+      - Degree:  Bachelor of Science
+        Date:  2005
+        Department:  Applied & Engineering Physics
+    Accomplishments:
+      - 'GPA:  4.0 / 4.0'
+      - 'Focus: Applied Mathematics and Modelling; differential equations;
+        nonlinear dynamical systems and chaos'
+      - 'Publication: "Dynamics of four coupled phase-only oscillators,"
+        Communications in Nonlinear Science and Numerical Simulation
+        (2006), with Dr. Richard Rand'
+      - Summa Cum Laude; Dean's List; Tau Beta Pi
+
+
+Extra:
+  - Instructor, Intro to Python, for Philadelphia Python Users Group
+  - Teaching Assistant, various courses for Girl Develop It Philly
+
+...

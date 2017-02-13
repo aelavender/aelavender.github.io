@@ -1,0 +1,119 @@
+{% macro html_ul(items, ul_class='', li_class='') %}
+	{# Turn a list of strings into an html unordered list #}
+	<ul class="{{ ul_class }}">
+		{% for item in items %}
+			<li class="{{ li_class }}">{{ item }}</li>
+		{% endfor %}
+	</ul>
+{% endmacro %}
+
+{% set header %}
+	{# Hard-coded h1; no spaces between spans #}
+	<h1 title="{{ d.Contact.Name }}" class="font-fancy lcase s1">
+		<span>anna.</span><span class="purple">e</span>.lavender<span
+			class="light-purple s1a">&#64;gm&#97;il&#46;c&#111;m</span></span>
+	</h1>
+	<section id="summary" class="italic s4 v1">
+		{{ d.Summary }}
+	</section>
+{% endset %}
+
+{% set col1 %}
+	<div>
+		<section id="expertise">
+			<h2 class="s2 font-fancy lcase first-letter-purple bracketed">Expertise</h2>
+			{{ html_ul(d.Expertise, "v1", "bulleted vhalf") }}
+		</section>
+		<section id="education" class="v2">
+			<h2 class="s2 font-fancy lcase first-letter-purple bracketed">Education</h2>
+			<ul class="v1">
+				{% for item in d.Education %}
+					<li>
+						<div>
+							<h3 class="inline s3 bold ucase">
+								{{ item.Organisation }}
+							</h3>
+							<div class="inline italic">
+								{{ item.Location }}
+							</div>
+						</div>
+						<ul class="vhalf">
+							{% for degree in item.Degrees %}
+								<li class="vhalf">
+									<h4 class="s4 bold">
+										{{degree.Degree}} {{degree.Date}}
+									</h4>
+									<div class="italic">
+										{{degree.Department}}
+									</div>
+								</li>
+							{% endfor %}
+						</ul>
+						{{ html_ul(item.Accomplishments, li_class="bulleted vhalf") }}
+					</li>
+				{% endfor %}
+			</ul>
+		</section>
+		<section id="extra" class="v2">
+			<h2 class="s2 font-fancy lcase first-letter-purple bracketed">Extra</h2>
+			{{ html_ul(d.Extra, "v1", "vhalf bulleted") }}
+		</section>
+	</div>
+{% endset %}
+
+{% set col2 %}
+	<div>
+		<section id="experience">
+			<h2 class="s2 font-fancy lcase first-letter-purple bracketed">Experience</h2>
+			<ul>
+				{% for item in d.Experience %}
+					<li class="v1">
+						<div class="vhalf">
+							<div>
+								<h3 class="inline s3 bold ucase">
+									{{ item.Organisation }}
+								</h3>
+								<div class="inline italic">
+									{{ item.Location }}
+								</div>
+							</div>
+							{% if item.Title %}
+							<div>
+								<div class="inline s4 bold">
+									{{ item.Date | replace("-", "&mdash;") | safe }}
+								</div>
+								<div class="inline italic">
+									{{ item.Title }}, {{item.Department}}
+								</div>
+							</div>
+							{% endif %}
+						</div>
+
+						{{ html_ul(item.Accomplishments, li_class="bulleted vhalf") }}
+					</li>
+				{% endfor %}
+			</ul>
+		</section>
+	</div>
+{% endset %}
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ d.Contact.Name }}</title>
+		<link href="https://fonts.googleapis.com/css?family=Asap|Quattrocento+Sans:400,400i,700" rel="stylesheet">
+		<link rel="StyleSheet" href="style.css" type="text/css" />
+	</head>
+	<body>
+		<div id="page">
+			<div id="main" class="base">
+				{{ header | safe }}
+				<div class="columns v2">
+					{{ col1 | safe }}
+					{{ col2 | safe }}
+				</div>
+			<div>
+		</div>
+	</body>
+</html>
